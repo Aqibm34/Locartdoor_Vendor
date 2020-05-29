@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+    <color name="greenD">#36d153</color>
+    <color name="black">#000000</color>
+    <color name="orange">#fc6203</color>
+    <color name="lorange">#fa9819</color>
+    <color name="red">#fc3503</color>
+    <color name="lemon">#dbdb00</color>
+    <color name="navigationColor">#fe485a</color>
+    <color name="dash_back">#E8EAEA</color>
+    <color name="greenY">#97e833</color>
+    <color name="blue">#2cd1c3</color>
+    <color name="pink">#fa5c7f</color>
+    <color name="l_green">#B2FB9E</color>
+    <color name="l_blue">#97FAF1</color>
+    <color name="l_peach">#F6BBC8</color>
+    <color name="l_grey">#F6DF9B</color>
+    <color name="login_btn_color"> #FFC5FF21</color>
+
+</resources>

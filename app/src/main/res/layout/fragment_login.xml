@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/splash_bg"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/logoTv"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/locartdoor_nfor_vendor"
+        android:fontFamily="cursive"
+        android:textSize="35sp"
+        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_below="@+id/logoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/transparent_bg"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/phoneET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_custom"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="5dp"
+                android:textColorHint="@color/white"
+                android:hint="Enter Mobile Number"
+                android:inputType="phone"
+                android:padding="5dp"
+                android:layout_marginTop="40dp"
+                android:autofillHints="mobile" >
+            </EditText>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_getOtp"
+                    android:layout_width="250dp"
+                    android:layout_height="70dp"
+                    android:background="@null"
+                    android:src="@drawable/signup_btn"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/signup" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:textSize="17sp"
+                    android:text="@string/continue_"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OR else signIn with:"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/google_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <!--        <com.facebook.login.widget.LoginButton-->
+            <!--            android:id="@+id/facebook_btn"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:text="Facebook"-->
+            <!--            android:layout_margin="0dp"-->
+            <!--            android:textColor="@color/white"-->
+            <!--            android:background="@drawable/com_facebook_button_background"-->
+            <!--            android:layout_marginBottom="30dp" />-->
+
+            <Button
+                android:id="@+id/facebook_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Facebook"
+                android:paddingStart="20dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/com_facebook_button_icon"
+                android:background="@drawable/com_facebook_button_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logoTv"
+        android:src="@drawable/ic_account_circle_black_24dp"/>
+
+    <FrameLayout
+        android:id="@+id/otp_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include layout="@layout/progressbar"/>
+
+
+</RelativeLayout>

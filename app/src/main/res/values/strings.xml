@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Locartdoor Vendor</string>
+    <string name="login">Login</string>
+    <string name="Next">Next</string>
+    <string name="delivering_on_the_promise_done_fast_done_right">Delivering on the promise\nDone fast . Done right</string>
+    <string name="logo">logo</string>
+    <string name="background">Background</string>
+    <string name="already_have_an_account">Already have a vendor account ?</string>
+    <string name="new_user">New vendor account ?</string>
+    <string name="signup">Signup</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="continue_">Continue</string>
+    <string name="continue_to_register">Continue to register</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="locartdoor_nfor_vendor">Locartdoor\n<font size="25">for vendor</font></string>
+</resources>
