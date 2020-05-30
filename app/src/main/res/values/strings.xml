@@ -17,4 +17,5 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="locartdoor_nfor_vendor">Locartdoor\n<font size="25">for vendor</font></string>
+    <string name="user_profile">User Profile</string>
 </resources>
