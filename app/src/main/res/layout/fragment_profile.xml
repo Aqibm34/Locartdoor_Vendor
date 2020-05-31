@@ -1,14 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".Fragments.Profile">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <View
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic"
+            android:layout_marginTop="50sp"
+            android:src="@drawable/profile"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100sp"
+            android:layout_height="100sp"/>
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="20sp"
+            android:layout_below="@+id/profile_pic"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="NAME"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginTop="3sp"
+                android:padding="10sp"
+                android:background="@drawable/profile_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="My Name"
+                    android:textStyle="bold"
+                   android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <TextView
+                android:text="MOBILE NUMBER"
+                android:layout_marginTop="20sp"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginTop="3sp"
+                android:padding="10sp"
+                android:background="@drawable/profile_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="My Mobile Number"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <TextView
+                android:text="ADDRESS"
+                android:layout_marginTop="20sp"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginTop="3sp"
+                android:padding="10sp"
+                android:background="@drawable/profile_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="My Address"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+
+           <RelativeLayout
+               android:layout_marginTop="40sp"
+               android:layout_marginLeft="10sp"
+               android:layout_marginRight="10sp"
+               android:padding="10sp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/kyc_pic"
+                   android:padding="5sp"
+                   android:background="@drawable/kyc"
+                   android:layout_width="60sp"
+                   android:layout_height="30sp"/>
+
+               <TextView
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="15sp"
+                   android:layout_centerInParent="true"
+                   android:text="KYC-STATUS"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <ImageView
+                   android:src="@drawable/ic_arrow_right"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </RelativeLayout>
+
+            <View
+                android:background="@color/dash_back"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"/>
+
+            <RelativeLayout
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:padding="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/adhar_pic"
+                    android:padding="5sp"
+                    android:background="@drawable/adhar"
+                    android:layout_width="60sp"
+                    android:layout_height="30sp"/>
+
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_centerInParent="true"
+                    android:text="ADD AADHAR CARD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <View
+                android:background="@color/dash_back"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"/>
+
+
+            <RelativeLayout
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:padding="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pan_pic"
+                    android:padding="5sp"
+                    android:background="@drawable/pan"
+                    android:layout_width="60sp"
+                    android:layout_height="30sp"/>
+
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_centerInParent="true"
+                    android:text="ADD PAN CARD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <View
+                android:background="@color/dash_back"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"/>
+
+
+            <RelativeLayout
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:padding="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/driving"
+                    android:padding="5sp"
+                    android:background="@drawable/driving"
+                    android:layout_width="60sp"
+                    android:layout_height="30sp"/>
+
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_centerInParent="true"
+                    android:text="ADD Driving License"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <View
+                android:background="@color/dash_back"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"/>
+
+
+            <RelativeLayout
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:padding="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/about_pic"
+                    android:padding="5sp"
+                    android:background="@drawable/ic_info_outline_black_24dp"
+                    android:layout_width="60sp"
+                    android:layout_height="30sp"/>
+
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_centerInParent="true"
+                    android:text="ABOUT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

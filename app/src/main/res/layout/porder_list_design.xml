@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/status1"
+                android:text="DELIVERED"
+                android:background="@color/greenD"
+                android:padding="8sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/orderid1"
+                android:layout_below="@+id/status1"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="10sp"
+                android:text="#9199"
+                android:drawablePadding="10sp"
+                android:drawableStart="@drawable/ic_center_focus_weak_black_24dp"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/location1"
+                android:layout_below="@+id/orderid1"
+                android:layout_marginLeft="10sp"
+                android:text="Customer Location"
+                android:layout_marginTop="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/date_time1"
+                android:layout_below="@+id/location1"
+                android:layout_marginLeft="10sp"
+                android:text="29/05/2020 | 8:59PM"
+                android:layout_marginTop="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/items1"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:text="2 Plate Full Mutton Biriyani || Rs.470/-"
+                android:layout_marginRight="10sp"
+                android:layout_below="@+id/date_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginTop="15sp"
+                android:layout_marginRight="10sp"
+                android:src="@drawable/ic_arrow_right_green"
+                android:layout_below="@+id/date_time1"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

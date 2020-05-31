@@ -6,15 +6,21 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
+
+import aquib.mohd.locartdoorvendor.Fragments.Orders;
+import aquib.mohd.locartdoorvendor.Fragments.Profile;
 
 public class Home_page extends AppCompatActivity {
 
@@ -35,6 +41,27 @@ public class Home_page extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         navigationView = findViewById(R.id.nav_view);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.userprofile:
+                        loadFrag(new Profile());
+                        return true;
+
+                    case R.id.orders:
+                        loadFrag(new Orders());
+                        return true;
+
+
+                }
+                return false;
+            }
+        });
+
+
     }
 
     public void setupToolbar()
@@ -58,5 +85,15 @@ public class Home_page extends AppCompatActivity {
             backToast.show();
         }
         back=System.currentTimeMillis();
+    }
+
+    private void loadFrag(Fragment fragment) {
+
+        if (fragment != null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.homepage_frame_container, fragment, "tag");
+            transaction.addToBackStack("tag").commit();
+            drawerLayout.closeDrawers();
+        }
     }
 }
