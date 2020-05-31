@@ -16,9 +16,9 @@
     <color name="blue">#2cd1c3</color>
     <color name="pink">#fa5c7f</color>
     <color name="l_green">#B2FB9E</color>
-    <color name="l_blue">#97FAF1</color>
+    <color name="l_blue">#429F96</color>
     <color name="l_peach">#F6BBC8</color>
-    <color name="l_grey">#F6DF9B</color>
+    <color name="l_yellow">#FF9100</color>
     <color name="login_btn_color"> #FFC5FF21</color>
 
 </resources>

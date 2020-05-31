@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:drawablePadding="5dp"
             android:textSize="16sp"
-            android:text="Home"
+            android:text="Shop"
             android:drawableStart="@drawable/ic_location"
             android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
             android:textStyle="bold"

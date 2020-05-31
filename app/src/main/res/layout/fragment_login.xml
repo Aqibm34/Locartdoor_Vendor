@@ -6,6 +6,7 @@
     android:clickable="true"
     android:focusable="true"
     android:background="@drawable/splash_bg"
+    android:fitsSystemWindows="true"
     tools:context=".Login">
 
     <TextView
@@ -49,7 +50,6 @@
                 android:textColorHint="@color/white"
                 android:hint="Enter Mobile Number"
                 android:inputType="phone"
-                android:padding="5dp"
                 android:layout_marginTop="40dp"
                 android:autofillHints="mobile" >
             </EditText>
@@ -93,7 +93,7 @@
                 android:id="@+id/google_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="10dp"/>
 
             <!--        <com.facebook.login.widget.LoginButton-->
             <!--            android:id="@+id/facebook_btn"-->
@@ -109,10 +109,11 @@
             <Button
                 android:id="@+id/facebook_btn"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:text="Facebook"
                 android:paddingStart="20dp"
-                android:layout_margin="5dp"
+                android:paddingEnd="20dp"
+                android:layout_margin="10dp"
                 android:textColor="@color/white"
                 android:drawableStart="@drawable/com_facebook_button_icon"
                 android:background="@drawable/com_facebook_button_background" />
@@ -124,6 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-60dp"
+        android:contentDescription="@string/username"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/logoTv"
         android:src="@drawable/ic_account_circle_black_24dp"/>
