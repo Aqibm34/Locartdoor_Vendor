@@ -24,7 +24,9 @@ import java.util.Objects;
 
 import aquib.mohd.locartdoorvendor.Fragments.Home;
 import aquib.mohd.locartdoorvendor.Fragments.Location;
+import aquib.mohd.locartdoorvendor.Fragments.Orders;
 import aquib.mohd.locartdoorvendor.Fragments.Paymentdetails;
+import aquib.mohd.locartdoorvendor.Fragments.Profile;
 import aquib.mohd.locartdoorvendor.Fragments.Subscription;
 
 public class Home_page extends AppCompatActivity {
@@ -99,12 +101,13 @@ public class Home_page extends AppCompatActivity {
 
 
                 case R.id.userprofile:
-//                    loadFrag(new User_profile());
+                    loadFrag(new Profile());
                     return true;
 
                 case R.id.orders:
-//                    loadFrag(new Orders());
+                    loadFrag(new Orders());
                     return true;
+
 
                 case R.id.subscription:
                     loadFrag(new Subscription());
@@ -138,6 +141,7 @@ public class Home_page extends AppCompatActivity {
 
             if (fragment != null) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_from_left,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_left);
                 transaction.replace(R.id.homepage_frame_container, fragment, "tag");
                 transaction.addToBackStack("tag").commit();
                 drawerLayout.closeDrawers();

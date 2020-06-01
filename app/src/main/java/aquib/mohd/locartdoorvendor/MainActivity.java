@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import aquib.mohd.locartdoorvendor.Fragments.Login;
+import aquib.mohd.locartdoorvendor.Fragments.Register;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
 

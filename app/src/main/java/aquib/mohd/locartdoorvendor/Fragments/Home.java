@@ -51,7 +51,7 @@ public class Home extends Fragment {
     private View.OnClickListener order_lis =new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-//            loadFragment(new curr_orders());
+            loadFragment(new Orders());
         }
     };
 
@@ -92,4 +92,6 @@ public class Home extends Fragment {
         transaction.commit();
 
     }
+
+
 }

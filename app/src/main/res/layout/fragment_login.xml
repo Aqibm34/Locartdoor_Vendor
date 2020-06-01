@@ -7,7 +7,7 @@
     android:focusable="true"
     android:background="@drawable/splash_bg"
     android:fitsSystemWindows="true"
-    tools:context=".Login">
+    tools:context=".Fragments.Login">
 
     <TextView
         android:id="@+id/logoTv"
