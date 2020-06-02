@@ -22,7 +22,7 @@ public class Home extends Fragment {
         // Required empty public constructor
     }
     private TextView vendorname,shopname;
-    private CardView orderCV,complaints_CV,query_CV,dutyoff_CV,kyc_CV;
+    private CardView orderCV,complaints_CV,query_CV,dutyoff_CV,kyc_CV,addCV;
 
 
     @Override
@@ -38,12 +38,14 @@ public class Home extends Fragment {
         query_CV = v.findViewById(R.id.query_CV);
         dutyoff_CV = v.findViewById(R.id.duty_offCV);
         kyc_CV = v.findViewById(R.id.kyc_CV);
+        addCV = v.findViewById(R.id.add_prod_CV);
 
         orderCV.setOnClickListener(order_lis);
         complaints_CV.setOnClickListener(complaints_lis);
         query_CV.setOnClickListener(query_lis);
         dutyoff_CV.setOnClickListener(duty_lis);
         kyc_CV.setOnClickListener(kyc_lis);
+        addCV.setOnClickListener(add_lis);
 
         return v;
     }
@@ -80,6 +82,12 @@ public class Home extends Fragment {
         @Override
         public void onClick(View view) {
             loadFragment(new Duty_off());
+        }
+    };
+    private View.OnClickListener add_lis = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            loadFragment(new chooseProductCategory());
         }
     };
 
