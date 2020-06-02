@@ -183,7 +183,7 @@
         android:layout_marginLeft="10sp"
         android:layout_marginTop="20sp"
         android:layout_gravity="center"
-        android:text="@string/i_agree_to_the_terms_conditions"
+        android:text="I agree to the terms conditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button

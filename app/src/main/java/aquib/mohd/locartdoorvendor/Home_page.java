@@ -22,9 +22,12 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
+import aquib.mohd.locartdoorvendor.Fragments.Help;
 import aquib.mohd.locartdoorvendor.Fragments.Home;
 import aquib.mohd.locartdoorvendor.Fragments.Location;
+import aquib.mohd.locartdoorvendor.Fragments.Orders;
 import aquib.mohd.locartdoorvendor.Fragments.Paymentdetails;
+import aquib.mohd.locartdoorvendor.Fragments.Profile;
 import aquib.mohd.locartdoorvendor.Fragments.Subscription;
 
 public class Home_page extends AppCompatActivity {
@@ -99,11 +102,11 @@ public class Home_page extends AppCompatActivity {
 
 
                 case R.id.userprofile:
-//                    loadFrag(new User_profile());
+                   loadFrag(new Profile());
                     return true;
 
                 case R.id.orders:
-//                    loadFrag(new Orders());
+                  loadFrag(new Orders());
                     return true;
 
                 case R.id.subscription:
@@ -116,7 +119,7 @@ public class Home_page extends AppCompatActivity {
                     return true;
 
                 case R.id.help:
-//                    loadFrag(new Help());
+                   loadFrag(new Help());
                     return true;
 
                 case R.id.share:
