@@ -26,10 +26,4 @@
     <string name="help">Help</string>
     <string name="log_out">Log Out</string>
     <string name="arrow">arrow</string>
-    <string name="rs_symbol">₹</string>
-    <string name="plan_price">₹999</string>
-    <string name="query_category">Query category:</string>
-    <string name="choose_category">Choose category</string>
-    <string name="attachment">attachment</string>
-    <string name="reference_id">Reference ID:</string>
 </resources>

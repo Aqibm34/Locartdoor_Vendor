@@ -68,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/reference_id"/>
+                android:text="Id"/>
 
             <TextView
                 android:id="@+id/cmp_refid"

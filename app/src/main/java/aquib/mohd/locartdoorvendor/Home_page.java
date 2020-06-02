@@ -22,6 +22,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
+import aquib.mohd.locartdoorvendor.Fragments.Help;
 import aquib.mohd.locartdoorvendor.Fragments.Home;
 import aquib.mohd.locartdoorvendor.Fragments.Location;
 import aquib.mohd.locartdoorvendor.Fragments.Orders;
@@ -101,13 +102,12 @@ public class Home_page extends AppCompatActivity {
 
 
                 case R.id.userprofile:
-                    loadFrag(new Profile());
+                   loadFrag(new Profile());
                     return true;
 
                 case R.id.orders:
-                    loadFrag(new Orders());
+                  loadFrag(new Orders());
                     return true;
-
 
                 case R.id.subscription:
                     loadFrag(new Subscription());
@@ -119,7 +119,7 @@ public class Home_page extends AppCompatActivity {
                     return true;
 
                 case R.id.help:
-//                    loadFrag(new Help());
+                   loadFrag(new Help());
                     return true;
 
                 case R.id.share:
@@ -141,7 +141,6 @@ public class Home_page extends AppCompatActivity {
 
             if (fragment != null) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_left,R.anim.exit_to_right,R.anim.enter_from_right,R.anim.exit_to_left);
                 transaction.replace(R.id.homepage_frame_container, fragment, "tag");
                 transaction.addToBackStack("tag").commit();
                 drawerLayout.closeDrawers();

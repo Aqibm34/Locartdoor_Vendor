@@ -17,7 +17,7 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/greenD"
         android:textStyle="bold"
-        android:text="@string/query_category"/>
+        android:text="Wuery Category"/>
 
     <Spinner
         android:id="@+id/cat_spinner"
@@ -56,7 +56,7 @@
           android:background="@null"
           android:layout_margin="5dp"
           android:src="@drawable/ic_baseline_attachment_24"
-          android:contentDescription="@string/attachment" />
+          android:contentDescription="attachment" />
 
     </FrameLayout>
 
