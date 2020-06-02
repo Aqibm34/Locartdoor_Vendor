@@ -1,4 +1,4 @@
-package aquib.mohd.locartdoorvendor;
+package aquib.mohd.locartdoorvendor.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,9 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import com.google.android.gms.common.SignInButton;
+
+import aquib.mohd.locartdoorvendor.Home_page;
+import aquib.mohd.locartdoorvendor.R;
 
 
 /**

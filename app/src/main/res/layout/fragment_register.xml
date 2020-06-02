@@ -13,7 +13,7 @@
     android:focusable="true"
     android:background="@color/white"
     android:padding="20dp"
-    tools:context=".Register">
+    tools:context=".Fragments.Register">
 
     <ImageButton
         android:id="@+id/backButton"
