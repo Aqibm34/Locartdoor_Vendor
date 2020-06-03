@@ -20,7 +20,7 @@ import aquib.mohd.locartdoorvendor.R;
  */
 public class PastOrder extends Fragment {
     RecyclerView recyclerView;
-    ArrayList<String> status,orderId,location,time,date,items,price;
+    ArrayList<String> status,orderId,cname,location,time,date,items,price;
 
     public PastOrder() {
         // Required empty public constructor
@@ -36,6 +36,7 @@ public class PastOrder extends Fragment {
         recyclerView=v.findViewById(R.id.recyclerview1);
         status=new ArrayList<String>();
         orderId=new ArrayList<String>();
+        cname=new ArrayList<String>();
         location=new ArrayList<String>();
         time=new ArrayList<String>();
         date=new ArrayList<String>();
@@ -46,6 +47,8 @@ public class PastOrder extends Fragment {
         status.add("CANCELLED");
         orderId.add("#901");
         orderId.add("#902");
+        cname.add("Sayan Pal");
+        cname.add("Aquib");
         location.add("Sitalapara,Shyamnagar,Barrackpore");
         location.add("FiderRoad,Shyamnagar,North 24 Pargans");
         time.add("12:40PM");
@@ -57,7 +60,7 @@ public class PastOrder extends Fragment {
         price.add("Rs.420/-");
         price.add("Rs.400/-");
 
-        PastOrderAdapter pastOrderAdapter=new PastOrderAdapter(getActivity(),status,orderId,location,time,date,items,price);
+        PastOrderAdapter pastOrderAdapter=new PastOrderAdapter(getActivity(),status,orderId,cname,location,time,date,items,price);
         recyclerView.setAdapter(pastOrderAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 

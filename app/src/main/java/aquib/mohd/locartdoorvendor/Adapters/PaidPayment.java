@@ -1,7 +1,6 @@
 package aquib.mohd.locartdoorvendor.Adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,44 +12,42 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import aquib.mohd.locartdoorvendor.R;
+import de.hdodenhof.circleimageview.CircleImageView;
 
-public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyViewHolder> {
+public class PaidPayment extends RecyclerView.Adapter<PaidPayment.MyViewHolder> {
     Context context;
-    ArrayList<String> status,orderId,cname,location,time,date,items,price;
+    ArrayList<String> cname,caddress,orderId,time,date,items,price;
+    ArrayList<Integer> cimage;
 
 
-    public PastOrderAdapter(Context context, ArrayList<String> status, ArrayList<String> orderId,ArrayList<String> cname,ArrayList<String> location, ArrayList<String> time, ArrayList<String> date, ArrayList<String> items, ArrayList<String> price) {
+    public PaidPayment(Context context, ArrayList<String> cname, ArrayList<String> caddress, ArrayList<String> orderId, ArrayList<String> time, ArrayList<String> date, ArrayList<String> items, ArrayList<String> price, ArrayList<Integer> cimage) {
         this.context = context;
-        this.status = status;
+        this.cname =cname;
+        this.caddress=caddress;
         this.orderId = orderId;
-        this.cname=cname;
-        this.location=location;
         this.time =time ;
         this.date=date;
         this.items = items;
         this.price=price;
+        this.cimage=cimage;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(context);
-        View view=inflater.inflate(R.layout.porder_list_design,parent,false);
+        View view=inflater.inflate(R.layout.paid_design,parent,false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
-        if (status.get(position).equals("CANCELLED"))
-        {
-            holder.s1.setBackgroundColor(Color.RED);
-        }
 
-        holder.s1.setText(status.get(position));
+        holder.i.setImageResource(cimage.get(position));
+        holder.n.setText(cname.get(position));
+        holder.a.setText(caddress.get(position));
        holder.id1.setText(orderId.get(position));
-       holder.n.setText(cname.get(position));
-       holder.l1.setText(location.get(position));
         holder.td1.setText(date.get(position)+" | "+time.get(position));
        holder.i1.setText(items.get(position)+" | "+price.get(position));
 
@@ -61,22 +58,24 @@ public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyVi
 
     @Override
     public int getItemCount() {
-        return status.size();
+        return cname.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView s1,id1,n,l1,td1,i1;
+        TextView n,a,id1,td1,i1;
+        CircleImageView i;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-             s1=itemView.findViewById(R.id.status1);
-            id1=itemView.findViewById(R.id.orderid1);
-            n=itemView.findViewById(R.id.cname3);
-            l1=itemView.findViewById(R.id.location1);
-            td1=itemView.findViewById(R.id.date_time1);
-             i1=itemView.findViewById(R.id.items1);
+             n=itemView.findViewById(R.id.cname1);
+            a=itemView.findViewById(R.id.caddress1);
+            id1=itemView.findViewById(R.id.orderid2);
+            td1=itemView.findViewById(R.id.date_time2);
+             i1=itemView.findViewById(R.id.items2);
+             i=itemView.findViewById(R.id.cimage1);
+
 
         }
     }
