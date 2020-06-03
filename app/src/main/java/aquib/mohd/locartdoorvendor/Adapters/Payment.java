@@ -2,16 +2,19 @@ package aquib.mohd.locartdoorvendor.Adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import aquib.mohd.locartdoorvendor.Fragments.Bill;
 import aquib.mohd.locartdoorvendor.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -50,9 +53,28 @@ public class Payment extends RecyclerView.Adapter<Payment.MyViewHolder> {
         holder.a.setText(caddress.get(position));
        holder.id1.setText(orderId.get(position));
         holder.td1.setText(date.get(position)+" | "+time.get(position));
-       holder.i1.setText(items.get(position)+" | "+price.get(position));
+       holder.i1.setText(items.get(position)+" | Rs."+price.get(position)+"/-");
+
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Bundle b=new Bundle();
+               b.putString("cname",cname.get(position));
+               b.putString("caddress",caddress.get(position));
+               b.putString("orderid",orderId.get(position));
+               b.putString("date",date.get(position));
+               b.putString("items",items.get(position));
+               b.putString("price",price.get(position));
+               b.putString("status","DUE");
+
+               AppCompatActivity activity=(AppCompatActivity)view.getContext();
+               Bill bill=new Bill();
+               bill.setArguments(b);
+               activity.getSupportFragmentManager().beginTransaction().replace(R.id.homepage_frame_container,bill).addToBackStack(null).commit();
 
 
+           }
+       });
 
 
     }

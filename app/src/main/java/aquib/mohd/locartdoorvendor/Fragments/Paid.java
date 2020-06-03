@@ -55,8 +55,8 @@ public class Paid extends Fragment {
         date.add("13/05/2020");
         items.add("2 plates Full Mutton Biriyani");
         items.add("4 plates Half Chicken Biriyani");
-        price.add("Rs.420/-");
-        price.add("Rs.400/-");
+        price.add("420");
+        price.add("400");
         cimage.add(R.drawable.profile);
         cimage.add(R.drawable.profile);
 

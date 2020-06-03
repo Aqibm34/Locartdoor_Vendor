@@ -21,5 +21,6 @@
     <color name="l_peach">#F6BBC8</color>
     <color name="l_yellow">#FF9100</color>
     <color name="login_btn_color"> #FFC5FF21</color>
+    <color name="a_blue">#f0f8ff</color>
 
 </resources>
