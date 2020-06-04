@@ -26,4 +26,7 @@
     <string name="help">Help</string>
     <string name="log_out">Log Out</string>
     <string name="arrow">arrow</string>
+    <string name="choose_from_exixting_items_n_add_only_price">Choose from exixting items\n Add only price</string>
+    <string name="or">OR</string>
+    <string name="add_new_item">Add new Item</string>
 </resources>

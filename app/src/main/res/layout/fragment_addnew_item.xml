@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Fragments.addnewItem">
+
+
+    <TextView
+        android:id="@+id/cat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:elevation="5dp"
+        android:layout_marginBottom="20dp"
+        android:text="Food Items" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/black_border">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/catName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category name"
+            android:layout_marginBottom="15dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Item name"
+            android:layout_marginBottom="15dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/itemQTY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item quantity or weight"
+                android:layout_marginBottom="15dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/itemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item price"
+                android:inputType="number"
+                android:layout_marginBottom="15dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_custom"
+        android:textColor="@color/white"
+        android:text="Add item"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
