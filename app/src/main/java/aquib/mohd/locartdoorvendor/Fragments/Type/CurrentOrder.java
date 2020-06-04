@@ -21,7 +21,7 @@ import aquib.mohd.locartdoorvendor.R;
 public class CurrentOrder extends Fragment {
 
     RecyclerView recyclerView;
-    ArrayList<String> status,orderId,location,time,date,items,price,arriveTime;
+    ArrayList<String> status,orderId,cname,location,time,date,items,price,arriveTime;
 
 
 
@@ -38,6 +38,7 @@ public class CurrentOrder extends Fragment {
         recyclerView=v.findViewById(R.id.recyclerview);
         status=new ArrayList<String>();
         orderId=new ArrayList<String>();
+        cname=new ArrayList<String>();
         location=new ArrayList<String>();
         time=new ArrayList<String>();
         date=new ArrayList<String>();
@@ -48,6 +49,8 @@ public class CurrentOrder extends Fragment {
         status.add("PREPARING");
         orderId.add("#1001");
         orderId.add("#1002");
+        cname.add("Sayan Pal");
+        cname.add("Aquib");
         location.add("Sitalapara,Shyamnagar,Barrackpore");
         location.add("FiderRoad,Shyamnagar,North 24 Pargans");
         time.add("12:40PM");
@@ -61,7 +64,7 @@ public class CurrentOrder extends Fragment {
         arriveTime.add("8 MINS");
         arriveTime.add("5 MINS");
 
-        MyAdapter myAdapter=new MyAdapter(getActivity(),status,orderId,location,time,date,items,price,arriveTime);
+        MyAdapter myAdapter=new MyAdapter(getActivity(),status,orderId,cname,location,time,date,items,price,arriveTime);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return v;

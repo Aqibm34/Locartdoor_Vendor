@@ -16,13 +16,14 @@ import aquib.mohd.locartdoorvendor.R;
 
 public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyViewHolder> {
     Context context;
-    ArrayList<String> status,orderId,location,time,date,items,price;
+    ArrayList<String> status,orderId,cname,location,time,date,items,price;
 
 
-    public PastOrderAdapter(Context context, ArrayList<String> status, ArrayList<String> orderId,ArrayList<String> location, ArrayList<String> time, ArrayList<String> date, ArrayList<String> items, ArrayList<String> price) {
+    public PastOrderAdapter(Context context, ArrayList<String> status, ArrayList<String> orderId,ArrayList<String> cname,ArrayList<String> location, ArrayList<String> time, ArrayList<String> date, ArrayList<String> items, ArrayList<String> price) {
         this.context = context;
         this.status = status;
         this.orderId = orderId;
+        this.cname=cname;
         this.location=location;
         this.time =time ;
         this.date=date;
@@ -48,6 +49,7 @@ public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyVi
 
         holder.s1.setText(status.get(position));
        holder.id1.setText(orderId.get(position));
+       holder.n.setText(cname.get(position));
        holder.l1.setText(location.get(position));
         holder.td1.setText(date.get(position)+" | "+time.get(position));
        holder.i1.setText(items.get(position)+" | "+price.get(position));
@@ -63,7 +65,7 @@ public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyVi
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView s1,id1,l1,td1,i1;
+        TextView s1,id1,n,l1,td1,i1;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -71,6 +73,7 @@ public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyVi
 
              s1=itemView.findViewById(R.id.status1);
             id1=itemView.findViewById(R.id.orderid1);
+            n=itemView.findViewById(R.id.cname3);
             l1=itemView.findViewById(R.id.location1);
             td1=itemView.findViewById(R.id.date_time1);
              i1=itemView.findViewById(R.id.items1);
